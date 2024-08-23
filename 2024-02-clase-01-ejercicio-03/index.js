@@ -7,8 +7,34 @@ let maxNota = 1;
 let minNota = 10;
 
 do {
-    // 
-    let nota = parseInt(prompt('Ingrese una nota (1 al 10)'));
+    let nota;
+    let notaValida;
+    do {
+        // Lo que se repite
+         nota = parseInt(prompt('Ingrese una nota (1 al 10)'));
+         // Esto va a devolver:
+         //- Numero de 1 y 10
+         //- Numero menor a 1
+         //- Numero mayor a 10
+         //- Nan
+
+         if(isNaN(nota)){
+            alert('Ingrese una nota numerica');
+            notaValida = false;
+         }
+         else if (nota < 1){
+            alert('La nota debe ser 1 o mas');
+            notaValida = false;
+         }
+         else if (nota > 10) {
+            alert('La nota no puede ser mayor a 10');
+            notaValida = false;
+         }
+         else{
+            notaValida = true
+         }
+    } while (!notaValida); // notaValida != true -----> es distindo de true 
+    
 
     if (nota < 4) {
         // desaprobado
