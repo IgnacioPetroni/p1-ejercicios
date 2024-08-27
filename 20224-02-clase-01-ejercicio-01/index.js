@@ -17,7 +17,7 @@ else{
 
 // Pregunto si es par
 if (num %2 == 1) {
-    // Es par porque el resto es 1
+    // Es impar porque el resto es 1
     alert("El numero es impar");
 }
 else{
