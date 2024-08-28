@@ -3,14 +3,12 @@ let ciudad;
 let sexo;
 let edad;
 let datoValido = true;
-// Declaro las variables necesarias para hacer los promedios
 
-let acumuladorEdadMujeres = 0, contadorEdadMujeres = 0;
-let acumuladorEdadHombres = 0, contadorEdadHombres = 0;
-let contadorMujeresMenores21 = 0;
-let contadorHombresMayores21 = 0;
+// Declaro las variables necesarias para hacer los promedios
+let acumuladorEdadMujeres = 0, acumuladorEdadHombres = 0;
+let contadorMujeresMenores21 = 0, contadorEdadMujeres = 0, contadorHombresMayores21 = 0, contadorEdadHombres = 0;
 let mayorEdadMujeres = 0;
-let menorEdadHombres = 100;
+let menorEdadHombres = 110;
 
 // Validacion de ciudad
 do{
@@ -51,7 +49,7 @@ do{
             alert('No dejar el prompt vacio');
             datoValido = false;
         }
-        else if (sexo.toLowerCase() !== 'h' & sexo.toLowerCase() !== 'm' && sexo.toLowerCase() !== 'x') {
+        else if (sexo.toLowerCase() !== 'h' && sexo.toLowerCase() !== 'm' && sexo.toLowerCase() !== 'x') {
             alert ('Complete con una opcion valida (H, M , X)');
             datoValido = false;
         }
@@ -59,13 +57,13 @@ do{
 
     //Validacion edad
     do {
-        edad = parseInt(prompt('Ingrese la edad entre (0 y 100)'));
+        edad = parseInt(prompt('Ingrese la edad entre (0 y 110)'));
         if (isNaN(edad)) {
             alert('Ingrese un numero');
             datoValido = false;
         }
-        else if (edad > 100){
-            alert('La edad no puede superar los 100 años');
+        else if (edad <= 0 || edad >= 110){
+            alert('edad fuera de rango, ingrese entre 0 y 110');
             datoValido = false;
         }
         else{
