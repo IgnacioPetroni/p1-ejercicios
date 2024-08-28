@@ -5,8 +5,8 @@ let edad;
 let datoValido = true;
 
 // Declaro las variables necesarias para hacer los promedios
-let acumuladorEdadMujeres = 0, acumuladorEdadHombres = 0;
-let contadorMujeresMenores21 = 0, contadorEdadMujeres = 0, contadorHombresMayores21 = 0, contadorEdadHombres = 0;
+let acumuladorEdadMujeres = 0, acumuladorEdadHombres = 0; acumuladorGeneral = 0;
+let contadorMujeresMenores21 = 0, contadorEdadMujeres = 0, contadorHombresMayores21 = 0, contadorEdadHombres = 0; contadorGeneral = 0;
 let mayorEdadMujeres = 0;
 let menorEdadHombres = 110;
 
@@ -96,9 +96,11 @@ do{
 //Mostramos los resultados obtenidos a traves de un alert
 alert(`El promedio general de las mujeres fue el siguiente: ${(acumuladorEdadMujeres/contadorEdadMujeres).toFixed(1)}`);
 alert(`El promedio general de los hombres fue el siguiente: ${(acumuladorEdadHombres/contadorEdadHombres).toFixed(1)}`);
-
+// Mayo y menor edad
 alert(`La mayor edad ingresada de las mujeres fue: ${mayorEdadMujeres}`);
 alert(`La menor edad de los hombres fue: ${menorEdadHombres}`);
-
+// Porcentajes 
+alert(`Un % ${100 * contadorHombresMayores21/contadorGeneral} de personas son hombres mayores a 21`);
+alert (`Un % ${100 * contadorMujeresMenores21/contadorGeneral} de personas son mujeres menores a 21`);
 
 
