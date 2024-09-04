@@ -67,7 +67,7 @@ function resultado() {
     else if (operacionActual === 'multiplicacion') {
         alert(`${numero1}*${numero2} dio: ${multiplicacion}`);
     }
-    else if(operacion === 'division'){
+    else if(operacionActual === 'division'){
         alert(`${numero1}/${numero2} dio: ${division}`);
     }
 }
