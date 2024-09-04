@@ -1,5 +1,5 @@
 // Variables globales
-let numero1, numero2, suma,resta, multiplicacion, division;
+let numero1, numero2, suma,resta, multiplicacion, division, operacionActual;
 
 /**
  * Funcion que atiende el click para pedir el primer numero
@@ -22,10 +22,13 @@ function pedirNumero2() {
  */
 function sumar() {
     suma = numero1 + numero2;
+    // Le asigno a la variable un string para luego en la funcion de resultado hacer las distintas comparaciones
+    operacionActual = 'suma'
 
 }
 function restar() {
     resta = numero1 - numero2;
+    operacionActual = 'resta'
 
 }
 /**
@@ -33,28 +36,38 @@ function restar() {
  */
 function multiplicar() {
     multiplicacion = (numero1 * numero2);
+    operacionActual = 'multiplicacion'
 }
 /**
  * Funcion que divide los dos numeros pedidos
  */
 function dividir(){
-    division = (numero1/numero2).toFixed(2);
+    // Evito que se divida por cero mediante un condicional
+    if (numero2 === 0) {
+        alert('No se puede dividir por cero');
+        division = 'Error'
+    }
+    // Sino dejo que se haga la operacion
+    else{
+        division = (numero1/numero2).toFixed(2);
+    }
+    operacionActual = 'division';
 }
 /**
  * Funcion que muestra el resultado de las operaciones
  */
 function resultado() {
     let operacion;
-    if (operacion = suma) {
+    if (operacionActual === 'suma') {
         alert(`${numero1}+${numero2} dio: ${suma}`);
     }
-    else if (operacion = resta) {
+    else if (operacionActual === 'resta') {
         alert(`${numero1}-${numero2} dio: ${resta}`);
     }
-    else if (operacion = multiplicacion) {
+    else if (operacionActual === 'multiplicacion') {
         alert(`${numero1}*${numero2} dio: ${multiplicacion}`);
     }
-    else if(operacion = division){
+    else if(operacion === 'division'){
         alert(`${numero1}/${numero2} dio: ${division}`);
     }
 }
