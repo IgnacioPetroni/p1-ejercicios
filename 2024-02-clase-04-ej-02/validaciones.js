@@ -53,7 +53,7 @@ function validarNota(msg = '') {
             alert('Ingrese un numero');
             datoValido = false;
         }
-        else if (aux > 4 || aux < 10) {
+        else if (aux < 4 || aux > 10) {
             alert('La nota debe ser entre 4 y 10');
             datoValido = false;
         }
