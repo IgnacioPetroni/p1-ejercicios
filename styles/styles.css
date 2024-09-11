@@ -76,11 +76,11 @@ main h2 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     
 }
 button{
-    margin-top: 10px;
+    margin: 3rem;
     padding: 10px;
     background-color: lightgray;
     border: none;
